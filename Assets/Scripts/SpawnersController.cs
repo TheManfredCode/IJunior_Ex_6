@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnersSynchronizer : MonoBehaviour
+public class SpawnersController: MonoBehaviour
 {
     [SerializeField] private float _spawnRate;
+
     private float _runningTime;
     private int _spawnIteration = 0;
     private Spawner[] _spawners;

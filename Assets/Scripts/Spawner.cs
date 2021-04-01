@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Transform))]
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] private GameObject Template;
+    [SerializeField] private Enemy _template;
     
     private Transform _transform;
 
     public void Spawn()
     {
-        Instantiate(Template, _transform.position, Quaternion.identity);
+        Instantiate(_template, _transform.position, Quaternion.identity);
     }
 
     private void Start()

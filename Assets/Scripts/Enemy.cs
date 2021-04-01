@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+[RequireComponent(typeof(Transform))]
+public class Enemy : MonoBehaviour
 {
     [SerializeField] private float _lifeTime;
     [SerializeField] private float _speed;
+
     private float _runningTime = 0f;
     private Transform _transform;
 
